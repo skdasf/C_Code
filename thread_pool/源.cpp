@@ -24,7 +24,7 @@ void print_block(int n, char c) {
 
 }
 
-int main()
+int mainsss()
 {
 	std::thread th1(print_block, 100, '*');
 	std::thread th2(print_block, 100, '$');
