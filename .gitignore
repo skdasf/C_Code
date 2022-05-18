@@ -39,3 +39,8 @@
 /.vs/C_Study/v16/.suo
 /thread_pool/Debug
 /thread_pool/x64/Debug
+/NetWork/.vs/NetWork/v16
+/NetWork/NetWork.vcxproj
+/NetWork/NetWork.vcxproj.user
+/NetWork/NetWork.vcxproj.filters
+/NetWork/NetWork.sln
