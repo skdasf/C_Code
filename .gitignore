@@ -44,3 +44,16 @@
 /NetWork/NetWork.vcxproj.user
 /NetWork/NetWork.vcxproj.filters
 /NetWork/NetWork.sln
+/ClinetFrameWork/.vs/ClinetFrameWork/v16
+/ClinetFrameWork/ClinetFrameWork.vcxproj.user
+*.filters
+/ClinetFrameWork/ClinetFrameWork.sln
+/NetWork/Debug/NetWork.tlog
+*.idb
+*.pdb
+*.ilk
+*.recipe
+*.log
+*.txt
+/ClinetFrameWork/Debug/ClinetFrameWork.tlog
+/ClinetFrameWork/Debug/clinet.obj.enc
