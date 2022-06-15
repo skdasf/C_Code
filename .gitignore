@@ -57,3 +57,6 @@
 *.txt
 /ClinetFrameWork/Debug/ClinetFrameWork.tlog
 /ClinetFrameWork/Debug/clinet.obj.enc
+/.vs
+/cStart/Debug/cStart.tlog
+/cStart/.vs/cStart/v16
