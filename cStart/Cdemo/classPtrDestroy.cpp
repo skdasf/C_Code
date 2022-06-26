@@ -85,7 +85,7 @@ struct B {
 };
 
 
-int main()  {
+int maindestroy()  {
 
     {
       auto ptr =  std::make_unique<C>();// ¶ÔÓÚconst 
