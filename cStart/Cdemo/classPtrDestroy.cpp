@@ -85,11 +85,16 @@ struct B {
 };
 
 
-int maindestroy()  {
+int main()  {
 
     {
-      auto ptr =  std::make_unique<C>();// 对于const 
-						B* b = new B(ptr);
+				//初始化方式1 
+     auto ptr =  std::make_unique<C>();// 对于const 
+					//  初始化方式2
+					std::unique_ptr<C> p1(new C());
+					auto ss = ptr->c;
+					auto ssss = p1->c;
+						//B* b = new B(ptr);
 								//delete b;
 							//	auto test = std::make_unique<B>();
 							//	test.reset();//清空unique指针

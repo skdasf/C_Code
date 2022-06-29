@@ -8,8 +8,11 @@
 	* C 容器类型，可以map、set、multi_map、multi_set、unordered_map、unordered_set
 	* S 同步类型，可以critical_section、event_t、mutex
 	*/
-	#include <map>
-	#include <mutex>
+#include <vector>
+#include <map>
+#include <queue>
+#include <mutex>
+#include <algorithm>
 
 template <
 				typename K,

@@ -9,6 +9,6 @@ struct A {
 
 
 
-int main(){
+int maintype(){
     return 0;
 }

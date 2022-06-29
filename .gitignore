@@ -60,3 +60,8 @@
 /.vs
 /cStart/Debug/cStart.tlog
 /cStart/.vs/cStart/v16
+/3rdpartyTest/3rd
+/3rdpartyTest/Boost/.vs/Boost/v16
+/3rdpartyTest/Boost/Boost.vcxproj.user
+/3rdpartyTest/.vs/3rdpartyTest/v16
+/3rdpartyTest/Boost/x64/Debug/Boost.tlog
