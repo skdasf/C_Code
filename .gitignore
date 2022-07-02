@@ -66,3 +66,5 @@
 /3rdpartyTest/.vs/3rdpartyTest/v16
 /3rdpartyTest/Boost/x64/Debug/Boost.tlog
 /3rdpartyTest/Boost/.vs/Boost/config/applicationhost.config
+/cStart/Debug
+/cStart/x64/Debug/cStart.tlog

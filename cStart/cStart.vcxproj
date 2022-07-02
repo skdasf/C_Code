@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cdemo\callback.cpp" />
     <ClCompile Include="Cdemo\classPtrDestroy.cpp" />
     <ClCompile Include="Cdemo\syncTest.cpp" />
     <ClCompile Include="Cdemo\typdef_typename.cpp" />

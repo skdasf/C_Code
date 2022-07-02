@@ -26,6 +26,18 @@ sum :   1. ¶ÔÓÚconst µÄÖ¸Õë»òÕß¶ÔÏó£¬»òÕß²»º¬Ä¬ÈÏ¹¹Ôìº¯ÊıµÄ¶ÔÏó¡£¶¼·ÅÔÚ²ÎÊıÁĞ±í½
 */
 #include <memory>
 #include <iostream>
+#include <vector>
+
+void testfuncListdele(){
+				std::vector<int> a;// Õ»ÇøµÄ»áÄÚ´æ×Ô¶¯»ØÊÕ
+				a.push_back(1);
+				a.push_back(2);
+				a.push_back(3);
+				a.push_back(4);
+
+								
+}
+
 struct C1 {
 				int c1;
 				C1(int a){};
@@ -63,13 +75,17 @@ struct B {
 				char b;
 				const int c1_int = 1;
 				char c ='a';
+				std::vector<int> test_vec;// »á±»Çå¿Õ
 				C  sss;
 		 // C1 c111; // Ê×ÏÈ¼ì²é²ÎÊıÁĞ±íÖĞÊÇ·ñº¬ÓĞÂú×ãC1µÄ¿½±´¹¹Ôìº¯Êı£¬Èç¹ûÃ»ÓĞÖ±½Ó±¨´í  
 				int a[4] ={1,2,3,4}; // Êı×éÈ«²¿Çå¿Õe
 			 const	C* cptr; //deleteºó »á³£×¤ÄÚ´æ   2. ÕâÖÖÓÃconstĞŞÊÎµÄÖ¸ÕëÊ±²»ÄÜ±»ĞŞ¸ÄµÄ£¬ÖÇÄÜÖ¸Õë¿ÉÒÔ
     const std::unique_ptr<C>& cuniquePtr   = std::make_unique<C>() ;//deleteºó ²»»á³£×¤ÄÚ´æ   ÒıÓÃ
 				B(const std::unique_ptr<C>& c1):cuniquePtr(c1){// 1. µ÷ÓÃ¹¹Ôìº¯ÊıÊ±£¬»áÏÈÈ¥¹¹Ôì³ÉÔ±±äÁ¿£¨Ö»ÓĞ¸³Öµ²Ù×÷£¨=£©³ÉÔ±±äÁ¿£¬¶ø²»»á¹¹ÔìÉùÃ÷µÄ¶ÔÏó£©£¬ÔÙÖ´ĞĞÆäÖĞµÄº¯Êı
-
+								test_vec.push_back(1);
+								test_vec.push_back(2);
+								test_vec.push_back(3);
+						
 					//	 c111  =  C1(1);
 							cuniquePtr->c = 1;  // ÊÇ¿ÉÒÔĞŞ¸ÄÖ¸ÏòµÄÄÚ´æµÄ
 							//c1= 2;//
@@ -85,7 +101,7 @@ struct B {
 };
 
 
-int main()  {
+int mainptr_callback()  {
 
     {
 				//³õÊ¼»¯·½Ê½1 
@@ -96,12 +112,12 @@ int main()  {
 					auto ssss = p1->c;
 						//B* b = new B(ptr);
 								//delete b;
-							//	auto test = std::make_unique<B>();
+								auto test = std::make_unique<B>(ptr);
 							//	test.reset();//Çå¿ÕuniqueÖ¸Õë
 							//	auto ptrA = std::make_shared<A>(std::make_unique<B>());
 				
 				}
-
+				testfuncListdele();
 
 return 0;
 }
