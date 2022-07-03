@@ -111,12 +111,15 @@ int main(){
 
     unique_ptr<callback::B> test(new callback::B());
 
-    //test->regester(std::bind(&callback::A::callback));  // wrong
+    //test->regester(std::bind(&callback::A::callback, &ass,std::placeholders::_1));  // right
+    //test->regester(std::bind(&callback::A::callback,&*testA,std::placeholders::_1));  // right  but  strange
     // unique_ptr<callback::B> test(new callback::B(ass));
     //test->sethanle();
 
    // test->regester([](const string &st){ cout<< st;}); // 使用匿名函数注册回调
     //test->regester(std::bind(callback::A::callback,testA));
+    
+    
     test->start();
    }
     return 0;
