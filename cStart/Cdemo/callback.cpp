@@ -10,7 +10,7 @@ using namespace std;
     A1: 练习回调，与注册回调。用一个类执行另外一个类中的函数。
             当B中成员变量的值增加到10后，执行A中的函数。
     Q1: 在调用B的注册回调函数，只能传递lambda函数，而不能传递A的对象实例中的非静态成员方法。因为
-        在对象中的非static成员方法，是含有this指针的，如果直接利用参数func 没有指定实体的对象，是无法找到this指针导致调用失败
+        在对象中的非static成员方法，是含有this指针的，如果直接利用参数func 没有指定实体的对象，是无法找到this指针导致调用失败。因此要bind 绑定到指定对象的中，如.
 
     A2： 用两种方式，1.B中生成A的实例对象。  2.调用B的注册回调函数  
     Q2： 非静态成员都不能直接注册。
@@ -112,7 +112,7 @@ int main(){
     unique_ptr<callback::B> test(new callback::B());
 
     //test->regester(std::bind(&callback::A::callback, &ass,std::placeholders::_1));  // right
-    //test->regester(std::bind(&callback::A::callback,&*testA,std::placeholders::_1));  // right  but  strange
+    test->regester(std::bind(&callback::A::callback,testA.get(),std::placeholders::_1));  // right  but  strange
     // unique_ptr<callback::B> test(new callback::B(ass));
     //test->sethanle();
 
