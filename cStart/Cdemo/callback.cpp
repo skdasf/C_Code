@@ -104,7 +104,7 @@ public:
 
 }
 
-int main(){
+int mainCallBack(){
    {
     callback::A ass;
     unique_ptr<callback::A> testA(new callback::A());
