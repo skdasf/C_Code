@@ -1,7 +1,9 @@
 #include <iostream>
 #include <string>
 #include <variant>
-#include <variant>
+#include <thread>
+#include <memory>
+#include <functional>
 //1 . 测试decltyp(::函数)
 void decltype_func();
 void test(){
@@ -9,6 +11,33 @@ void test(){
 };
 // 2. 测试variant C++17
 std::variant<int, float> test111;
+// 3. class 测试线程bind类成员方法。 同时不join 进行try catch  --- 不能抛出异常，除非主线程exit  而不是return
+class ThreadTest {
+public:
+    ThreadTest();
+    ~ThreadTest();
+    void test(int a, const std::string& str);
+
+private:
+
+};
+
+ThreadTest::ThreadTest() {
+}
+
+ThreadTest::~ThreadTest() {
+}
+
+void ThreadTest::test(int a, const std::string& str) {
+    try {
+        std::cout << "\n";
+        std::cout << "int " << a << "\n";
+        std::cout << "string" << str << "\n";
+    }
+    catch (const std::exception& e) {
+        std::cout<< "excep" << e.what();
+    }
+}
 
 int main(){
 
@@ -31,8 +60,17 @@ int main(){
     catch (const std::exception& e) {
         std::cout<<"ss" << e.what();
     }
-   
-    return 0;
+
+   // 3. test
+    ThreadTest t;
+    auto  func =  std::bind(&ThreadTest::test, &t, std::placeholders::_1, std::placeholders::_2);
+    std::unique_ptr<std::thread>  thr;
+    try {
+        thr = std::make_unique<std::thread>(func, 1, "2"); // bind
+    } catch (const std::exception& e) {
+            std::cout << "excep" << e.what();
+    }
+   exit(1);
 }
 
 
