@@ -68,3 +68,7 @@
 /3rdpartyTest/Boost/.vs/Boost/config/applicationhost.config
 /cStart/Debug
 /cStart/x64/Debug/cStart.tlog
+*.vcxproj
+/DLL/DLL.vcxproj.user
+/DLL/x64/Debug
+/DLL/.vs/DLL/v16

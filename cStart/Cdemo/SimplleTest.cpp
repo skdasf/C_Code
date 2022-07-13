@@ -28,6 +28,10 @@ ThreadTest::ThreadTest() {
 ThreadTest::~ThreadTest() {
 }
 
+// 4.测试加载dll文件
+void dlltest(const std::string &str);
+
+
 void ThreadTest::test(int a, const std::string& str) {
     try {
         std::cout << "\n";
@@ -39,7 +43,7 @@ void ThreadTest::test(int a, const std::string& str) {
     }
 }
 
-int main(){
+int mainSimpleTest(){
 
     using type  = decltype(::decltype_func);// decltype 可以声明一个函数类型（类似于functional）
     type* sss; // 必须为函数指针。因为test函数这个名字就是一个指针。
@@ -70,7 +74,11 @@ int main(){
     } catch (const std::exception& e) {
             std::cout << "excep" << e.what();
     }
-   exit(1);
+   //exit(1);
+    thr->join();
+    // 4. test
+   dlltest("this is test");
+   return 0;
 }
 
 
