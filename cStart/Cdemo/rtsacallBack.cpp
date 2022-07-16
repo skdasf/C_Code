@@ -79,7 +79,7 @@ void print(void* pra){
 }
 
 
-int main(){
+int mainrtsacalBack(){
     // 1.test
     loghander handle = [](int num,const std::string &str){
         std::cout<<"num" << num <<std::endl;
