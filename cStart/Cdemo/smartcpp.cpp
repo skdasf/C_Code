@@ -20,10 +20,10 @@ public:
 };
 //其他相同代码省略...
 
-// 2. 测试只能指针的自动析构,主要是Lambda中的参数。 Lambda 中的参数必须是只能指针的模板类型
+// 2. 测试只能指针的自动析构,谓词中的Lambda中的参数。 Lambda 中的参数必须是只能指针的模板类型
 
 
-int main() {
+int mainsamrt() {
     // 1.测试enable_shared_from_this的引用计数
    {
     //A a;
