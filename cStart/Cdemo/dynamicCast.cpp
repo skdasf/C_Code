@@ -57,7 +57,7 @@ private:
 
 
 
-int main(){
+int maindynamic(){
 				// 1.
 				color test1 = color::black; 
 				auto test1_cast = static_cast<int>(test1);

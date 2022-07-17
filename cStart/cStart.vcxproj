@@ -148,6 +148,7 @@
     <ClCompile Include="Cdemo\callback.cpp" />
     <ClCompile Include="Cdemo\classPtrDestroy.cpp" />
     <ClCompile Include="Cdemo\dynamicCast.cpp" />
+    <ClCompile Include="Cdemo\future_test.cpp" />
     <ClCompile Include="Cdemo\rtsacallBack.cpp" />
     <ClCompile Include="Cdemo\SimplleTest.cpp" />
     <ClCompile Include="Cdemo\smartcpp.cpp" />
