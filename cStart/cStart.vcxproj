@@ -154,6 +154,8 @@
     <ClCompile Include="Cdemo\smartcpp.cpp" />
     <ClCompile Include="Cdemo\syncTest.cpp" />
     <ClCompile Include="Cdemo\typdef_typename.cpp" />
+    <ClCompile Include="Cdemo\Thread_tryccatch.cpp" />
+    <ClCompile Include="Cdemo\waitForMutipleObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cdemo\sync_container.h" />

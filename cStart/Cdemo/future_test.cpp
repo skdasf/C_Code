@@ -50,7 +50,7 @@ int  package_test(int form, int to){
     std::cout<<"Finished!\n";
     return form - to;
 }
-int main(){
+int mainfututre(){
     // 1.
    // std::promise<void> prmis;
    // auto fu = prmis.get_future();
